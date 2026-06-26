@@ -1,0 +1,2 @@
+#!/bin/bash
+docker-php-ext-install pdo_mysql
