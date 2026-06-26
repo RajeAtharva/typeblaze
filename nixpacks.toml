@@ -1,8 +1,0 @@
-[phases.setup]
-nixPkgs = ["php", "phpPackages.pdo_mysql", "phpPackages.mysqlnd"]
-
-[phases.install]
-cmds = ["php -i | grep pdo"]
-
-[start]
-cmd = "php -S 0.0.0.0:$PORT -t ."
