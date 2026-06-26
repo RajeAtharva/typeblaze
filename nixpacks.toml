@@ -1,5 +1,8 @@
 [phases.setup]
-nixPkgs = ["php85", "php85Extensions.pdo_mysql", "php85Extensions.pdo", "php85Extensions.mysqli", "php85Extensions.mbstring", "php85Extensions.openssl"]
+nixPkgs = ["php", "phpPackages.pdo_mysql"]
+
+[phases.build]
+cmds = ["php -r \"echo 'PDO MySQL: ' . (extension_loaded('pdo_mysql') ? 'YES' : 'NO') . PHP_EOL;\""]
 
 [start]
 cmd = "php -S 0.0.0.0:$PORT -t ."
