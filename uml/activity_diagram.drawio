@@ -1,0 +1,101 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Activity Diagram" id="0">
+    <mxGraphModel dx="2175" dy="1214" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="10" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#000000;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="450" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Open test page" vertex="1">
+          <mxGeometry height="50" width="160" x="390" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Load sample text and initialize test" vertex="1">
+          <mxGeometry height="60" width="240" x="350" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Click Start Test" vertex="1">
+          <mxGeometry height="50" width="160" x="390" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Typing in progress" vertex="1">
+          <mxGeometry height="50" width="160" x="390" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Update timer, WPM, accuracy, mistakes" vertex="1">
+          <mxGeometry height="60" width="260" x="340" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Test complete?" vertex="1">
+          <mxGeometry height="90" width="130" x="405" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Continue typing" vertex="1">
+          <mxGeometry height="50" width="150" x="660" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Show result summary" vertex="1">
+          <mxGeometry height="50" width="160" x="390" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="User logged in?" vertex="1">
+          <mxGeometry height="90" width="130" x="405" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Save result to database" vertex="1">
+          <mxGeometry height="50" width="220" x="360" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Load recent history" vertex="1">
+          <mxGeometry height="50" width="160" x="390" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Show login reminder" vertex="1">
+          <mxGeometry height="50" width="150" x="730" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="23" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#000000;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="450" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="30" edge="1" parent="1" source="10" style="endArrow=block;html=1;" target="11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="31" edge="1" parent="1" source="11" style="endArrow=block;html=1;" target="12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="32" edge="1" parent="1" source="12" style="endArrow=block;html=1;" target="13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33" edge="1" parent="1" source="13" style="endArrow=block;html=1;" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="34" edge="1" parent="1" source="14" style="endArrow=block;html=1;" target="15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="35" edge="1" parent="1" source="15" style="endArrow=block;html=1;" target="16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="36" edge="1" parent="1" source="16" style="endArrow=block;html=1;" target="17" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="37" edge="1" parent="1" source="17" style="endArrow=block;html=1;" target="14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="735" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" edge="1" parent="1" source="16" style="endArrow=block;html=1;" target="18" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="39" edge="1" parent="1" source="18" style="endArrow=block;html=1;" target="19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="40" edge="1" parent="1" source="19" style="endArrow=block;html=1;" target="20" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="41" edge="1" parent="1" source="20" style="endArrow=block;html=1;" target="21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="42" edge="1" parent="1" source="21" style="endArrow=block;html=1;" target="23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="43" edge="1" parent="1" source="19" style="endArrow=block;html=1;" target="22" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="44" edge="1" parent="1" source="22" style="endArrow=block;html=1;" target="23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

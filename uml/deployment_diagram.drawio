@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Deployment Diagram" id="0">
+    <mxGraphModel dx="1414" dy="789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="10" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;rounded=0;html=1;" value="Client Device&#xa;--&#xa;+ Browser: Web Browser&#xa;+ Protocol: HTTP / HTTPS&#xa;+ Interface: HTML, CSS, JS" vertex="1">
+          <mxGeometry height="130" width="240" x="60" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=200;rounded=0;html=1;" value="Web Server&#xa;--&#xa;+ OS: Linux&#xa;+ Server: Apache&#xa;+ Runtime: PHP 8.x&#xa;+ App: TypeBlaze&#xa;+ Entry: index.php, login.php&#xa;+ Pages: test.php, dashboard.php&#xa;+ Pages: leaderboard.php, admin/index.php&#xa;+ Actions: php/*.php&#xa;+ Helpers: includes/*.php&#xa;+ Assets: js/*.js, css/*.css" vertex="1">
+          <mxGeometry height="310" width="300" x="420" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;rounded=0;html=1;" value="Database Server&#xa;--&#xa;+ DBMS: MySQL&#xa;+ Schema: typeblaze&#xa;+ Table: users&#xa;+ Table: test_results&#xa;+ Table: typing_texts&#xa;+ Table: daily_challenges&#xa;+ View: leaderboard&#xa;+ View: user_stats" vertex="1">
+          <mxGeometry height="250" width="260" x="840" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="1" source="10" style="endArrow=block;endFill=1;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="11" value="HTTP / HTTPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="11" style="endArrow=block;endFill=1;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="12" value="PDO / SQL">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

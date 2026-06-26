@@ -1,0 +1,35 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Sequence Diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="10" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="80" y="30" width="40" height="80" as="geometry"/></mxCell>
+        <mxCell id="11" value="test.php" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="220" y="40" width="110" height="40" as="geometry"/></mxCell>
+        <mxCell id="12" value="js/test.js" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="440" y="40" width="110" height="40" as="geometry"/></mxCell>
+        <mxCell id="13" value="php/save_result.php" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="680" y="40" width="150" height="40" as="geometry"/></mxCell>
+        <mxCell id="14" value="includes/config.php" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="940" y="40" width="150" height="40" as="geometry"/></mxCell>
+        <mxCell id="15" value="MySQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=15;" vertex="1" parent="1"><mxGeometry x="1180" y="30" width="80" height="60" as="geometry"/></mxCell>
+        <mxCell id="20" style="shape=line;strokeWidth=1;html=1;" vertex="1" parent="1"><mxGeometry x="100" y="120" width="1" height="820" as="geometry"/></mxCell>
+        <mxCell id="21" style="shape=line;strokeWidth=1;html=1;" vertex="1" parent="1"><mxGeometry x="275" y="120" width="1" height="820" as="geometry"/></mxCell>
+        <mxCell id="22" style="shape=line;strokeWidth=1;html=1;" vertex="1" parent="1"><mxGeometry x="495" y="120" width="1" height="820" as="geometry"/></mxCell>
+        <mxCell id="23" style="shape=line;strokeWidth=1;html=1;" vertex="1" parent="1"><mxGeometry x="755" y="120" width="1" height="820" as="geometry"/></mxCell>
+        <mxCell id="24" style="shape=line;strokeWidth=1;html=1;" vertex="1" parent="1"><mxGeometry x="1015" y="120" width="1" height="820" as="geometry"/></mxCell>
+        <mxCell id="25" style="shape=line;strokeWidth=1;html=1;" vertex="1" parent="1"><mxGeometry x="1220" y="120" width="1" height="820" as="geometry"/></mxCell>
+        <mxCell id="30" value="Open test page" style="endArrow=block;html=1;" edge="1" parent="1" source="10" target="11"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="220" y="150"/></Array></mxGeometry></mxCell>
+        <mxCell id="31" value="Load page + inject server text" style="endArrow=block;html=1;" edge="1" parent="1" source="11" target="12"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="440" y="200"/></Array></mxGeometry></mxCell>
+        <mxCell id="32" value="Start typing" style="endArrow=block;html=1;" edge="1" parent="1" source="10" target="12"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="440" y="260"/></Array></mxGeometry></mxCell>
+        <mxCell id="33" value="Calculate WPM / accuracy / mistakes" style="endArrow=block;html=1;" edge="1" parent="1" source="12" target="12"><mxGeometry relative="1" as="geometry"><mxPoint x="570" y="320" as="targetPoint"/><Array as="points"><mxPoint x="560" y="320"/><mxPoint x="560" y="350"/><mxPoint x="495" y="350"/></Array></mxGeometry></mxCell>
+        <mxCell id="34" value="POST result (mode, wpm, accuracy, mistakes, duration, char_count, csrf)" style="endArrow=block;html=1;" edge="1" parent="1" source="12" target="13"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="680" y="410"/></Array></mxGeometry></mxCell>
+        <mxCell id="35" value="requireCsrf() + getDB()" style="endArrow=block;html=1;" edge="1" parent="1" source="13" target="14"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="940" y="470"/></Array></mxGeometry></mxCell>
+        <mxCell id="36" value="Insert into test_results" style="endArrow=block;html=1;" edge="1" parent="1" source="14" target="15"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1180" y="530"/></Array></mxGeometry></mxCell>
+        <mxCell id="37" value="Insert success" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="15" target="13"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="830" y="590"/></Array></mxGeometry></mxCell>
+        <mxCell id="38" value="JSON success" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="13" target="12"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="550" y="650"/></Array></mxGeometry></mxCell>
+        <mxCell id="39" value="GET history" style="endArrow=block;html=1;" edge="1" parent="1" source="12" target="13"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="680" y="710"/></Array></mxGeometry></mxCell>
+        <mxCell id="40" value="Query recent results" style="endArrow=block;html=1;" edge="1" parent="1" source="13" target="15"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1180" y="770"/></Array></mxGeometry></mxCell>
+        <mxCell id="41" value="Return history JSON" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="13" target="12"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="550" y="840"/></Array></mxGeometry></mxCell>
+        <mxCell id="42" value="Update history table" style="dashed=1;endArrow=open;html=1;" edge="1" parent="1" source="12" target="10"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="140" y="900"/></Array></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
