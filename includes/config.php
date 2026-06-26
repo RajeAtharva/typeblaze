@@ -1,11 +1,9 @@
 <?php
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'mysql.railway.internal');
 define('DB_USER', 'root');
-define('DB_PASS', 'atharva@07raje');
-define('DB_NAME', 'typeblaze');
-define('SITE_NAME', 'TypeBlaze');
-define('SITE_URL', 'http://localhost/typeblaze');
-
+define('DB_PASS', 'ENhrsoxTXDiolklwNLmKrXJnrxwRfSkh');
+define('DB_NAME', 'railway');
+define('SITE_URL', 'https://typeblaze-production.up.railway.app');
 function getDB(): PDO {
     static $pdo = null;
 
