@@ -1,25 +1,40 @@
 <?php
-define('DB_HOST', 'mysql.railway.internal');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Auto detect - Railway ya Local
+if (getenv('MYSQLHOST')) {
+    // Railway environment
+    define('DB_HOST', 'mysql.railway.internal');
 define('DB_USER', 'root');
 define('DB_PASS', 'ENhrsoxTXDiolklwNLmKrXJnrxwRfSkh');
 define('DB_NAME', 'railway');
 define('SITE_URL', 'https://typeblaze-production.up.railway.app');
+} else {
+    // Local XAMPP
+    define('DB_HOST', 'localhost');
+    define('DB_USER', 'root');
+    define('DB_PASS', 'atharva@07raje');
+    define('DB_NAME', 'typeblaze');
+    define('SITE_URL', 'http://localhost/typeblaze');
+}
+
+define('SITE_NAME', 'TypeBlaze');
+
 function getDB(): PDO {
     static $pdo = null;
-
     if ($pdo === null) {
         try {
             $dsn = 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4';
             $pdo = new PDO($dsn, DB_USER, DB_PASS, [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                PDO::ATTR_EMULATE_PREPARES => false,
+                PDO::ATTR_EMULATE_PREPARES   => false,
             ]);
         } catch (PDOException $e) {
             die('Database connection failed: ' . $e->getMessage());
         }
     }
-
     return $pdo;
 }
 
@@ -64,30 +79,20 @@ function verifyCsrf(?string $token): bool {
 }
 
 function requireCsrf(?string $token, bool $json = false): void {
-    if (verifyCsrf($token)) {
-        return;
-    }
-
+    if (verifyCsrf($token)) return;
     if ($json) {
         jsonResponse(['error' => 'invalid_csrf'], 403);
     }
-
     setFlash('error', 'Your session expired. Please try again.');
     redirect(SITE_URL . '/login.php');
 }
 
 function setFlash(string $type, string $message): void {
-    $_SESSION['flash'] = [
-        'type' => $type,
-        'message' => $message,
-    ];
+    $_SESSION['flash'] = ['type' => $type, 'message' => $message];
 }
 
 function getFlash(): ?array {
-    if (!isset($_SESSION['flash'])) {
-        return null;
-    }
-
+    if (!isset($_SESSION['flash'])) return null;
     $flash = $_SESSION['flash'];
     unset($_SESSION['flash']);
     return $flash;
