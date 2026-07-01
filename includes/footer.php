@@ -43,6 +43,6 @@
   </div>
 </footer>
 
-<script src="<?= SITE_URL ?>/js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

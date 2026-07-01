@@ -10,7 +10,7 @@ $flash = getFlash();
 <title><?= SITE_NAME ?> - <?= $pageTitle ?? 'Speed Typing Test' ?></title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?= SITE_URL ?>/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body class="<?= isset($_COOKIE['tb_theme']) && $_COOKIE['tb_theme'] === 'light' ? 'light' : '' ?>">
