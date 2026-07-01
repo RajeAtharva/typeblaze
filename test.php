@@ -107,5 +107,5 @@ $serverText = $stmt->fetchColumn() ?: '';
   </div>
 </div>
 
-<script src="/js/test.js"></script>
+<script src="<?= SITE_URL ?>/js/test.js"></script>
 <?php include 'includes/footer.php'; ?>

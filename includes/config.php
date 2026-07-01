@@ -5,13 +5,13 @@ if (getenv('MYSQLHOST')) {
     define('DB_USER', 'root');
     define('DB_PASS', 'ENhrsoxTXDiolklwNLmKrXJnrxwRfSkh');
     define('DB_NAME', 'railway');
-    define('SITE_URL', '');
+    define('SITE_URL', 'https://typeblaze-production.up.railway.app');
 } else {
     define('DB_HOST', 'localhost');
     define('DB_USER', 'root');
     define('DB_PASS', 'atharva@07raje');
     define('DB_NAME', 'typeblaze');
-    define('SITE_URL', '/typeblaze');
+    define('SITE_URL', 'http://localhost/typeblaze');
 }
 
 define('SITE_NAME', 'TypeBlaze');
